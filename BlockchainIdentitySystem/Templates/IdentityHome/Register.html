@@ -1,0 +1,294 @@
+﻿<div class="content-i">
+    <div class="content-box" >
+        <div class="row">
+             <div class="col-sm-4">
+                 <div class="user-profile compact">
+
+                     
+
+                     
+                     <div class="up-head-w"style="background-image:url({{imageSrc}})" >
+                         <!--<img ng-src="{{imageSrc}}" />-->
+
+                         <div class="up-main-info">
+                             <h2 class="up-header">{{child.name}}</h2>
+                             <h6 class="up-sub-header">{{child.charityHome}}</h6>
+                         </div>
+                         <svg class="decor" width="842px" height="219px" viewBox="0 0 842 219" preserveAspectRatio="xMaxYMax meet"
+                              version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                             <g transform="translate(-381.000000, -362.000000)" fill="#FFFFFF">
+                                 <path class="decor-path" d="M1223,362 L1223,581 L381,581 C868.912802,575.666667 1149.57947,502.666667 1223,362 Z"></path>
+                             </g>
+                         </svg>
+                     </div>
+                     <div class="up-controls">
+                         <div class="row">
+                             
+                                 <div class="col-sm-4">
+                                     <div class="value-pair">
+                                         <div class="label">Status:</div>
+                                         <div ng-if="child.sponsored == 1" class="value badge badge-pill badge-success">Sponsored</div>
+                                         <div ng-if="child.sponsored == 2" class="value badge badge-pill badge-warning">Awaiting Confirmation</div>
+                                         <div ng-if="child.sponsored == 3" class="value badge badge-pill badge-danger">Awaiting Sponsoreship</div>
+
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-8 text-right">
+
+                                     <form>
+                                         <input type="file" class="btn-primary btn-sm" ng-file-select="onFileSelect($files)" ng-model="imageSrc"  style="width:100%" />
+                                     </form>
+                                 </div>
+                             
+                         </div>
+                     </div>
+                     <div class="up-contents">
+                         <div class="m-b">
+                             <div class="row m-b">
+                                 <div class="col-sm-6 b-r b-b col-xm-6 b-b">
+                                     <div class="el-tablo centered padded-v">
+                                         <div class="value">{{child.notimeSponsored}}</div>
+                                         <div class="label">Number of Sponsores</div>
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-6 b-b col-xm-6 b-b">
+                                     <div class="el-tablo centered padded-v">
+                                         <div class="value">{{child.gender}}</div>
+                                         <div class="label">Gender</div>
+                                     </div>
+                                 </div>
+                             </div>
+
+                         </div>
+                     </div>
+                 </div>
+             </div>
+            <div class="col-sm-8">
+                <div class="element-box">
+                    <form>
+                        <div class="steps-w">
+                            <div class="step-triggers">
+                                <a class="step-trigger active" href="#stepContent1">First Step</a>
+                                <a class="step-trigger" href="#stepContent2">Second Step</a>
+                                <a class="step-trigger" href="#stepContent3">Third Step</a>
+                            </div>
+                            <div class="step-contents">
+                                <div class="step-content active" id="stepContent1">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for=""> First Name</label>
+                                                <input class="form-control" placeholder="First Name"
+                                                       type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="">Last Name</label>
+                                                <input class="form-control" placeholder="Last Name"
+                                                       type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for=""> Date of Birth</label>
+                                                <input class="form-control" placeholder="First Name"
+                                                       type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="">Country of Origin</label>
+                                                <input class="form-control" placeholder="Last Name"
+                                                       type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for=""> States with Offices</label>
+                                        <select class="form-control select2" multiple="true">
+                                            <option selected="true">New York</option>
+                                            <option selected="true">California</option>
+                                            <option>Boston</option>
+                                            <option>Texas</option>
+                                            <option>Colorado</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for=""> Regular select</label>
+                                        <select class="form-control">
+                                            <option>Select State</option>
+                                            <option>New York</option>
+                                            <option>California</option>
+                                            <option>Boston</option>
+                                            <option>Texas</option>
+                                            <option>Colorado</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label> Example textarea</label>
+                                        <textarea class="form-control" rows="3"></textarea>
+                                    </div>
+                                    <div class="form-buttons-w text-right">
+                                        <a class="btn btn-primary step-trigger-btn" href="#stepContent2"> Continue</a>
+                                    </div>
+                                </div>
+                                <div class="step-content" id="stepContent2">
+                                    <div class="form-group">
+                                        <label for=""> Email address</label>
+                                        <input class="form-control" placeholder="Enter email"
+                                               type="email">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for=""> Password</label>
+                                                <input class="form-control" placeholder="Password"
+                                                       type="password">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="">Confirm Password</label>
+                                                <input class="form-control" placeholder="Password"
+                                                       type="password">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for=""> Regular select</label>
+                                        <select class="form-control">
+                                            <option>Select State</option>
+                                            <option>New York</option>
+                                            <option>California</option>
+                                            <option>Boston</option>
+                                            <option>Texas</option>
+                                            <option>Colorado</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-buttons-w text-right">
+                                        <a class="btn btn-primary step-trigger-btn" href="#stepContent3"> Continue</a>
+                                    </div>
+                                </div>
+                                <div class="step-content" id="stepContent3">
+                                    <div class="form-group">
+                                        <label for=""> Regular select</label>
+                                        <select class="form-control">
+                                            <option>Select State</option>
+                                            <option>New York</option>
+                                            <option>California</option>
+                                            <option>Boston</option>
+                                            <option>Texas</option>
+                                            <option>Colorado</option>
+                                        </select>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for=""> Date of Birth</label>
+                                                <input class="form-control" placeholder="First Name"
+                                                       type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="">Country of Origin</label>
+                                                <input class="form-control" placeholder="Last Name"
+                                                       type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-buttons-w text-right">
+                                        <button class="btn btn-primary">Submit Form</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--------------------
+        START - Color Scheme Toggler
+        -------------------->
+            <div class="floated-colors-btn second-floated-btn">
+                <div class="os-toggler-w">
+                    <div class="os-toggler-i">
+                        <div class="os-toggler-pill"></div>
+                    </div>
+                </div>
+                <span>Dark </span>
+                <span>Colors</span>
+            </div>
+            <!--------------------
+        END - Color Scheme Toggler
+        -------------------->
+            <!--------------------
+        START - Chat Popup Box
+        -------------------->
+            <div class="floated-chat-btn">
+                <i class="os-icon os-icon-mail-07"></i>
+                <span>Demo Chat</span>
+            </div>
+            <div class="floated-chat-w">
+                <div class="floated-chat-i">
+                    <div class="chat-close">
+                        <i class="os-icon os-icon-close"></i>
+                    </div>
+                    <div class="chat-head">
+                        <div class="user-w with-status status-green">
+                            <div class="user-avatar-w">
+                                <div class="user-avatar">
+                                    <img alt="" src="img/avatar1.jpg">
+                                </div>
+                            </div>
+                            <div class="user-name">
+                                <h6 class="user-title">John Mayers</h6>
+                                <div class="user-role">Account Manager</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-messages">
+                        <div class="message">
+                            <div class="message-content">Hi, how can I help you?</div>
+                        </div>
+                        <div class="date-break">Mon 10:20am</div>
+                        <div class="message">
+                            <div class="message-content">Hi, my name is Mike, I will be happy to assist you</div>
+                        </div>
+                        <div class="message self">
+                            <div class="message-content">Hi, I tried ordering this product and it keeps showing me error code.</div>
+                        </div>
+                    </div>
+                    <div class="chat-controls">
+                        <input class="message-input" placeholder="Type your message here..." type="text">
+                        <div class="chat-extra">
+                            <a href="#">
+                                <span class="extra-tooltip">Attach Document</span>
+                                <i class="os-icon os-icon-documents-07"></i>
+                            </a>
+                            <a href="#">
+                                <span class="extra-tooltip">Insert Photo</span>
+                                <i class="os-icon os-icon-others-29"></i>
+                            </a>
+                            <a href="#">
+                                <span class="extra-tooltip">Upload Video</span>
+                                <i class="os-icon os-icon-ui-51"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!--------------------
+            END - Chat Popup Box
+            -------------------->
+        </div>
+        <!--------------------
+        START - Sidebar
+        -------------------->
+        <!--------------------
+        END - Sidebar
+        -------------------->
+    </div>

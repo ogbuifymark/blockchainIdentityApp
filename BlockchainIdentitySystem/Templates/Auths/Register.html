@@ -1,0 +1,63 @@
+﻿<div class="all-wrapper menu-side with-pattern">
+    <div class="auth-box-w wider">
+        <div class="logo-w">
+
+            <img alt="" src="../../Content/plugins/lightpinsupreme/img/Icon.png" height="150" width="150">
+
+        </div>
+        <h4 class="auth-header">Create new account</h4>
+        <form name="registrationForm" ng-submit="submitRegistrationForm(registrationForm.$valid)">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert" ng-hide="hideWarningAlert" ng-if="authorizationMessage">
+                <button aria-label="Close" class="close" ng-click="closeWarningAlert()" type="button">
+                    <span aria-hidden="true"> &times;</span>
+                </button>
+                <strong>{{authorizationMessage}} </strong>
+            </div>
+            <div class="form-group" ng-class="{'has-error':registrationForm.email.$invalid && !registrationForm.email.$pristine}">
+                <label for=""> Email address</label>
+                <input name="email" ng-model="email" class="form-control" placeholder="Enter Your Email..." ng-maxlength="30" maxlength="30" required ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" />
+                <div class="pre-icon os-icon os-icon-email-2-at2"></div>
+                <!--<p class="text-danger" ng-show="registrationForm.email.$invalid && !registrationForm.email.$pristine"> Enter a valid email</p>-->
+            </div>
+            <div class="form-group" ng-class="{'has-error':registrationForm.email.$invalid && !registrationForm.email.$pristine}">
+                <label for=""> Ethereum address</label>
+                <input name="email" ng-model="ether" class="form-control" placeholder="Enter Your Ethereum  address" ng-maxlength="30" maxlength="30" required ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" />
+                <div class="pre-icon os-icon os-icon-email-2-at2"></div>
+                <!--<p class="text-danger" ng-show="registrationForm.email.$invalid && !registrationForm.email.$pristine"> Enter a valid email</p>-->
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group" ng-class="{'has-error':registrationForm.password.$invalid && !registrationForm.password.$pristine}">
+                        <label for=""> Password</label>
+                        <input type="password" name="password" class="form-control" placeholder="Enter Your Password... " maxlength="20" ng-model="password" ng-minlength="6" ng-maxlength="20" required />
+                        <div class="pre-icon os-icon os-icon-fingerprint"></div>
+                        <!--<p class="text-danger" ng-show="registrationForm.password.$invalid && !registrationForm.password.$pristine"> Password Is Required</p>-->
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group" ng-class="{'has-error':registrationForm.confirmPassword.$invalid && !registrationForm.confirmPassword.$pristine}">
+                        <label for="">Confirm Password</label>
+                        <input type="password" name="confirmPassword" class="form-control" placeholder="Repeat your password...  " maxlength="20" ng-model="confirmPassword" ng-minlength="6" ng-maxlength="20" required />
+                        <!--<p class="text-danger" ng-show="registrationForm.confirmPassword.$invalid && !registrationForm.confirmPassword.$pristine"> Password-Repeat Is Required</p>-->
+                        <p class="text-danger" ng-show="(confirmPassword !== password) && !registrationForm.confirmPassword.$pristine "> Password Fields Do Not Match</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons-w">
+                <button type="submit" class="btn btn-primary" ng-disabled="registrationForm.$invalid || (confirmPassword !== password) || loading" button-spinner="loading">
+
+                    <span ng-hide="loading">Create Your Account</span>
+                    <span ng-show="loading">Generating your wallet</span>
+                </button>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <a href="#!/auth/login">Login</a>
+                    </label>
+                </div>
+            </div>
+            <div class="float-lg-right buttons-w">
+                <a href="./"><i class="fa fa-2x fa-home"></i></a>
+            </div>
+        </form>
+    </div>
+</div>

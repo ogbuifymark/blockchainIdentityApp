@@ -1,0 +1,48 @@
+﻿
+    .my-controller {
+        border: 1px solid #fcc;
+        padding: 5px;
+        margin: 3px;
+    }
+
+        .my-controller small {
+            color: #c99;
+        }
+
+    .other-controller {
+        border: 1px solid #ccf;
+        padding: 5px;
+        margin: 3px;
+    }
+
+        .other-controller small {
+            color: #99c;
+        }
+
+    .third-controller {
+        border: 1px solid #cfc;
+        padding: 5px;
+        margin: 3px;
+    }
+
+        .third-controller small {
+            color: #9c9;
+        }
+        
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+.pagination a:hover:not(.active) {background-color: #ddd;}
+

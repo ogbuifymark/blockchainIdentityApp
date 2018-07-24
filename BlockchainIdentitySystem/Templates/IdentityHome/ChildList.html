@@ -1,0 +1,202 @@
+﻿
+<div class="content-i" ng-controller="ACademicController">
+    <div class="content-box">
+        <div class="pipelines-w">
+            <div class="row">                
+                    <div class="col-lg-4 col-xxl-4">
+                        <div class="pipeline white lined-primary" >
+                            <div class="pipeline-header">
+                                <h5 class="pipeline-name">Children that need Academic sponsore</h5>
+                                <div class="pipeline-header-numbers">
+                                    <div class="pipeline-value">$45,367</div>
+                                    <div class="pipeline-count">{{totalcount}} leads</div>
+                                </div>
+                                <div class="pipeline-settings os-dropdown-trigger">
+                                    <i class="os-icon os-icon-hamburger-menu-1"></i>
+                                    <div class="os-dropdown">
+                                        <div class="icon-w">
+                                            <i class="os-icon os-icon-ui-46"></i>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="os-icon os-icon-ui-49"></i>
+                                                    <span>Edit Record</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="os-icon os-icon-grid-10"></i>
+                                                    <span>Duplicate Item</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="os-icon os-icon-ui-15"></i>
+                                                    <span>Remove Item</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="os-icon os-icon-ui-44"></i>
+                                                    <span>Archive Project</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                                <div class="pipeline-body" >
+                                        <div width="100%"class="pipeline-item my-controller" dir-paginate="child in filteredAcademic | filter:q | itemsPerPage: pageSize" pagination-id="academic" current-page="currentPage" >
+
+                                           
+                                                <div  >
+                                                 
+                                                        <div class="pi-controls">
+                                                            <div class="pi-settings os-dropdown-trigger">
+                                                                <i class="os-icon os-icon-ui-46"></i>
+
+                                                            </div>
+                                                            <div ng-if="child.sponsored == 1" class="status status-green" data-placement="top" data-toggle="tooltip"
+                                                                 title="Sponsored"></div>
+                                                            <div ng-if="child.sponsored == 2" class="status status-pill yellow" data-placement="top" data-toggle="tooltip"
+                                                                 title="Awaiting Confirmation"></div>
+                                                            <div ng-if="child.sponsored == 3" class="status status-red" data-placement="top" data-toggle="tooltip"
+                                                                 title="Awaiting Sponsoreship"></div>
+                                                        </div>
+                                                        <div class="pi-body">
+                                                            <div class="avatar">
+                                                                <img alt="" src="{{child.picture}}" width="30">
+                                                            </div>
+                                                            <div class="pi-info">
+                                                                <div class="h6 pi-name">{{child.name}}</div>
+                                                                <div class="pi-sub">{{child.charityHome}}</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pi-foot">
+                                                            <div class="tags">
+                                                                <a class="tag" href="#!/dashboard/mykids/{{child.id}}">View child</a>
+                                                                <button class="tag"data="{{child.id}}" data-target="#onboardingWideFormModal" ng-click="getSponsorPage(child.id)" data-toggle="modal">Sponsor again</button>
+
+                                                            </div>
+
+                                                        </div>
+                                                   
+                                                </div>                         
+                                            
+                                        </div>
+                                    <div class="pagination">
+                                        <div class="text-center">
+                                            <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)"pagination-id="academic" template-url="dirPagination.tpl.html"></dir-pagination-controls>
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-lg-4 col-xxl-4">
+                        <div class="pipeline white lined-danger">
+                            <div class="pipeline-header">
+                                <h5 class="pipeline-name">Children that needs Health Care   </h5>
+                                <div class="pipeline-header-numbers">
+                                    <div class="pipeline-value">$5,743</div>
+                                    <div class="pipeline-count">7 leads</div>
+                                </div>
+                                <div class="pipeline-settings os-dropdown-trigger">
+                                    <i class="os-icon os-icon-hamburger-menu-1"></i>
+                                    <div class="os-dropdown">
+                                        <div class="icon-w">
+                                            <i class="os-icon os-icon-ui-46"></i>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="os-icon os-icon-ui-49"></i>
+                                                    <span>Edit Record</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="os-icon os-icon-grid-10"></i>
+                                                    <span>Duplicate Item</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="os-icon os-icon-ui-15"></i>
+                                                    <span>Remove Item</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="os-icon os-icon-ui-44"></i>
+                                                    <span>Archive Project</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ui-view="healthChildren"></div>
+                        </div>
+                    </div>
+                <div aria-hidden="true" class="onboarding-modal modal fade animated"
+                     id="onboardingWideFormModal" role="dialog" tabindex="-1">
+                    <div class="modal-dialog modal-lg modal-centered" role="document">
+                        <div class="modal-content text-center">
+                            <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                <span class="close-label">Skip Intro</span>
+                                <span class="os-icon os-icon-close"></span>
+                            </button>
+                            <div class="onboarding-side-by-side">
+                                <div class="onboarding-media">
+                                    <img alt="" src="{{sponsorchild.picture}}" width="200px"> 
+                                    <label>{{sponsorchild.name}}</label>                                  
+                                </div>
+                                <div class="onboarding-content with-gradient">
+                                    <h4 class="onboarding-title">Sponsor this child</h4>
+                                    <div class="onboarding-text">
+                                        In this example you can see a form where you can request some additional
+                                        information from the customer when they land on the app page.
+                                    </div>
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="">Your Full Name</label>
+                                                    <input class="form-control" placeholder="Enter your full name..."
+                                                           type="text" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="">Your Role</label>
+                                                    <select class="form-control">
+                                                        <option>Web Developer</option>
+                                                        <option>Business Owner</option>
+                                                        <option>Other</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-secondary" data-dismiss="modal" type="button"> Close</button>
+                                            <button class="btn btn-primary"data="{{sponsorchild.id}}" ng-click="sponsorthischild(sponsorchild.id)" type="button"> Sponsor</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    
+</script>

@@ -1,0 +1,111 @@
+﻿[{
+            "id": 001,
+            "name": "Chizzy Chinenye",
+            "charityHome": "mark charity home",
+            "gender": "male",
+            "schoolInfo": {
+                "schoolName": "command",
+                "class": "A",
+                "level": "primary one",
+                "schoolfeesAmount": "20000",
+                "term": "first term"
+            },
+            "healthInfo": {
+                "hieght": "5.0",
+                "bloodGroup": "B+",
+                "Genotype": "AA",
+                "medicalIssue": "none",
+                "medicalIssueDescription": "",
+                "medicalTreatmentFee": ""
+            },
+            "handlerInfo": {
+                "name": "chijioke",
+                "phoneNumber": "08083737373",
+                "address": " this is going to take my time",
+                "picture": "",
+                "gender": "female",
+                "Dob": "12-07-1997"
+            },
+            "family": {
+                "fathername": "",
+                "mothername": "",
+                "fatherstatus": 2,
+                "motherstatus": 2
+            }
+
+        },
+        {
+            "id": 002,
+            "name": "chinwe Chinenye",
+            "charityHome": "chike charity home",
+            "gender": "female",
+            "schoolInfo": {
+                "schoolName": "federal",
+                "class": "b",
+                "level": "primary three",
+                "schoolfeesAmount": "25000",
+                "term": "first term"
+            },
+            "healthInfo": {
+                "hieght": "5.0",
+                "bloodGroup": "B+",
+                "Genotype": "AA",
+                "medicalIssue": "none",
+                "medicalIssueDescription": "",
+                "medicalTreatmentFee": ""
+            },
+            "handlerInfo": {
+                "name": "chijioke",
+                "phoneNumber": "08083737373",
+                "address": " this is going to take my time",
+                "picture": "",
+                "gender": "female",
+                "Dob": "12-07-1997"
+            },
+            "family": {
+                "fathername": "",
+                "mothername": "",
+                "fatherstatus": 2,
+                "motherstatus": 2
+            }
+
+        },
+        {
+            "id": 003,
+            "name": "odo john",
+            "charityHome": "chike charity home",
+            "gender": "male",
+            "schoolInfo": {
+                "schoolName": "",
+                "class": "",
+                "level": "primary three",
+                "schoolfeesAmount": "25000",
+                "term": "first term"
+            },
+            "healthInfo": {
+                "hieght": "5.0",
+                "bloodGroup": "B+",
+                "Genotype": "AA",
+                "medicalIssue": "none",
+                "medicalIssueDescription": "",
+                "medicalTreatmentFee": ""
+            },
+            "handlerInfo": {
+                "name": "chijioke",
+                "phoneNumber": "08083737373",
+                "address": " this is going to take my time",
+                "picture": "",
+                "gender": "female",
+                "Dob": "12-07-1997"
+            },
+            "family": {
+                "fathername": "",
+                "mothername": "",
+                "fatherstatus": 2,
+                "motherstatus": 2
+            }
+
+        }
+        ]
+
+

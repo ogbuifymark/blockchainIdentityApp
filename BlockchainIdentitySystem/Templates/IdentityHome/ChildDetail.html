@@ -1,0 +1,235 @@
+﻿<div class="content-i">
+    <div class="content-box">
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="user-profile compact">
+                    <div class="up-head-w" style="background-image:url({{child.picture}})">
+                        
+                        <div class="up-main-info">
+                            <h2 class="up-header">{{child.name}}</h2>
+                            <h6 class="up-sub-header">{{child.charityHome}}</h6>
+                        </div>
+                        <svg class="decor" width="842px" height="219px" viewBox="0 0 842 219" preserveAspectRatio="xMaxYMax meet"
+                             version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g transform="translate(-381.000000, -362.000000)" fill="#FFFFFF">
+                                <path class="decor-path" d="M1223,362 L1223,581 L381,581 C868.912802,575.666667 1149.57947,502.666667 1223,362 Z"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="up-controls">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="value-pair">
+                                    <div class="label">Status:</div>
+                                    <div ng-if="child.sponsored == 1" class="value badge badge-pill badge-success">Sponsored</div>
+                                    <div ng-if="child.sponsored == 2" class="value badge badge-pill badge-warning">Awaiting Confirmation</div>
+                                    <div ng-if="child.sponsored == 3" class="value badge badge-pill badge-danger">Awaiting Sponsoreship</div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-6 text-right">
+                                <a class="btn btn-primary btn-sm" href="#">
+                                    <i class="os-icon os-icon-link-3"></i>
+                                    <span>Add to Friends</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="up-contents">
+                        <div class="m-b">
+                            <div class="row m-b">
+                                <div class="col-sm-6 b-r b-b col-xm-6 b-b">
+                                    <div class="el-tablo centered padded-v">
+                                        <div class="value">{{child.notimeSponsored}}</div>
+                                        <div class="label">Number of Sponsores</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 b-b col-xm-6 b-b">
+                                    <div class="el-tablo centered padded-v">
+                                        <div class="value">{{child.gender}}</div>
+                                        <div class="label">Gender</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="element-wrapper">
+                    <div class="element-box">
+                        <div class="element-info">
+                            <div class="element-info-with-icon">
+                                <div class="element-info-icon">
+                                    <div class="os-icon"><img src="{{child.handlerInfo.picture}}" width="100" /></div>
+                                </div>
+                                <div class="element-info-text">
+                                    <h5 class="element-inner-header">Handler Information</h5>
+                                    <div class="element-inner-desc">
+                                        {{child.handlerInfo.address}}
+                                        <a href="mailto:{{child.handlerInfo.email}}"
+                                           target="_blank">{{child.handlerInfo.address}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timed-activities compact">
+                            <div class="timed-activity">
+                                <div class="ta-record-w">
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>Phone Number : {{child.handlerInfo.phoneNumber}} </strong>
+                                        </div>
+
+                                    </div>
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>Gender: {{child.handlerInfo.gender}} </strong>
+                                        </div>
+                                    </div>
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>Gender: {{child.handlerInfo.Dob}} </strong>
+                                        </div>
+                                    </div>
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>Occupation: {{child.handlerInfo.Occupation}} </strong>
+                                        </div>
+                                    </div>
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>Educational Level: {{child.handlerInfo.EducationalLevel}} </strong>
+                                        </div>
+                                    </div>
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>Country: {{child.handlerInfo.country}} </strong>
+                                        </div>
+                                    </div>
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>Province: {{child.handlerInfo.province}} </strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <div class="element-wrapper">
+                    <div class="element-box">
+                        <h6 class="element-header">Academic Information</h6>
+                        <div class="timed-activities compact">
+                            <div class="timed-activity">
+                                <div class="ta-record-w">
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>School name:  {{child.schoolInfo.schoolname}}</strong>
+                                        </div>
+
+                                    </div>
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>Level:  {{child.schoolInfo.level}}</strong>
+                                        </div>
+
+                                    </div>
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>Class: {{child.schoolInfo.classes}}</strong>
+                                        </div>
+
+                                    </div>
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>School Fees:${{child.schoolInfo.schoolfeeAmount}}</strong>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h6 class="element-header">Family background</h6>
+                        <div class="timed-activities compact">
+                            <div class="timed-activity">
+                                <div class="ta-record-w">
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>Father name: {{child.familyInfo.fathername}} </strong>
+                                        </div>
+
+                                    </div>
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>Father name: {{child.familyInfo.mothername}} </strong>
+                                        </div>
+                                    </div>
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp" ng-if="child.familyInfo.fatherstatus ==1">
+                                            <strong>Father name: Still Alive </strong>
+                                        </div>
+                                        <div class="ta-timestamp" ng-if="child.familyInfo.fatherstatus ==2">
+                                            <strong>Father name: deceased </strong>
+                                        </div>
+                                    </div>
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp" ng-if="child.familyInfo.motherstatus ==1">
+                                            <strong>Father name: Still Alive </strong>
+                                        </div>
+                                        <div class="ta-timestamp" ng-if="child.familyInfo.motherstatus ==2">
+                                            <strong>Father name: deceased </strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                        
+                        <h6 class="element-header">Health Information</h6>
+                        <div class="timed-activities compact">
+                            <div class="timed-activity">
+                                <div class="ta-record-w">
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>Blood Group : {{child.healthInfo.bloodGroup}} </strong>
+                                        </div>
+
+                                    </div>
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>genotype: {{child.healthInfo.genotype}} </strong>
+                                        </div>
+                                    </div>
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>Height: {{child.healthInfo.height}} </strong>
+                                        </div>
+                                    </div>
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>Medical Issue: {{child.healthInfo.medicalIssue}} </strong>
+                                        </div>
+                                    </div>
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>MedicalIssue Description: {{child.healthInfo.medicalIssueDescription}} </strong>
+                                        </div>
+                                    </div>
+                                    <div class="ta-record">
+                                        <div class="ta-timestamp">
+                                            <strong>medical Treatment Fee: {{child.healthInfo.medicalTreatmentFee}} </strong>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

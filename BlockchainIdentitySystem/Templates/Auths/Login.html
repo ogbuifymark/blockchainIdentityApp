@@ -1,0 +1,49 @@
+﻿
+<div class="all-wrapper menu-side with-pattern">
+    <div class="auth-box-w">
+        <div class="logo-w">
+
+
+            <img alt="" src="../../Content/plugins/lightpinsupreme/img/Icon.png" height="150" width="150">
+
+        </div>
+        <h4 class="auth-header">Login </h4>
+        <form name="loginForm" ng-submit="submitLoginForm(loginForm.$valid)" novalidate>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert" ng-hide="hideWarningAlert" ng-if="authorizationMessage">
+                <button aria-label="Close" class="close" ng-click="closeWarningAlert()" type="button">
+                    <span aria-hidden="true"> &times;</span>
+                </button>
+                <strong>{{authorizationMessage}} </strong>
+            </div>
+            <div class="form-group" ng-class="{'has-error':loginForm.walletId.$invalid && !loginForm.walletId.$pristine}">
+                <label for="">Wallet ID</label>
+                <input type="text" name="walletId" class="form-control" placeholder="Enter Your Wallet ID..." ng-model="walletId" ng-maxlength="40" required>
+                <div class="pre-icon os-icon os-icon-user-male-circle"></div>
+                <!--<p class="text-danger" ng-show="loginForm.walletId.$invalid && !loginForm.walletId.$pristine"> Wallet ID Is Required</p>
+                <p class="text-danger" ng-show="loginForm.walletId.$error.maxlength"> Wallet ID Is Too Long</p>-->
+            </div>
+            <div class="form-group" ng-class="{'has-error':loginForm.password.$invalid && !loginForm.password.$pristine}">
+                <label for="">Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Enter Your Password... " ng-model="password" ng-minlength="3" ng-maxlength="20" required>
+                <div class="pre-icon os-icon os-icon-fingerprint"></div>
+                <!--<p class="text-danger" ng-show="loginForm.password.$invalid && !loginForm.password.$pristine"> Password Is Required</p>-->
+            </div>
+            <div class="buttons-w">
+                <button type="submit" class="btn btn-primary" ng-disabled="loginForm.$invalid || loading" button-spinner="loading" spinner-icon="fa fa-spinner">
+                    <span ng-hide="loading">Sign in to your account</span>
+                    <span ng-show="loading">Decrypting your wallet</span>
+                </button>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <a href="#!/auth/register">Register</a>
+
+                    </label>
+
+                </div>
+            </div>
+            <div class="float-lg-right buttons-w">
+                <a href="./"><i class="fa fa-2x fa-home"></i></a>
+            </div>
+        </form>
+    </div>
+</div>

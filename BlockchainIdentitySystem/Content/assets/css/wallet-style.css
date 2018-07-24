@@ -1,0 +1,207 @@
+main{
+	padding-top: 25px;
+}
+.no-border{
+	border: none !important;
+}
+#user-container{
+	display: inline-block;
+    padding: 10px 30px 30px;
+    border: 1px solid #ddd;
+}
+#user-container, #user-container img{
+	max-height: 100px;
+	height: 100px;
+}
+#user-container:hover{
+	background-color: transparent;
+}
+#logo-container{
+	max-width: 150px;
+	margin-bottom: 0px;
+    height: 64px;
+    vertical-align: middle;
+    display: table;
+}
+#logo-container img{
+	display: inline-table;
+	vertical-align: middle;
+}
+ul.side-nav.fixed li.logo.userImgSec{
+    border-bottom: 1px dotted #e2e1e1;
+    margin-bottom: 15px;
+    padding-bottom: 70px;
+    margin-top: 20px;
+}
+.userName{
+	line-height: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.card-content.dynamicPriceChart{
+	padding: 15px 0;
+}
+.mdl-img{
+	max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.container.container-90{
+	width: 90%;
+}
+.no-padd{
+	padding: 0 !important;
+}
+.h3-margin{
+    margin: 1.46rem 0 1.168rem 0;
+}
+.justify-space{
+	justify-content: space-around;
+}
+.price-color{
+    flex-grow: 0.3;
+    border-top: 5px solid #000;
+    color: #656565;
+    font-weight: 400;
+    padding-top: 5px;
+}
+.price-color.btc{
+	border-color: #f3cb22;
+}
+.price-color.ether{
+	border-color: #828384;
+}
+.price-color.naira{
+	border-color: #932d2b;
+}
+.price-chart .d-tab.Bitcoin{
+    color: #f3cb22 !important;
+    font-weight: 600;
+}
+.price-chart .d-tab:hover{
+	color: #333 !important;
+}
+.price-chart .d-tab.Ether{
+	color: #828384;
+    font-weight: 600;
+}
+.price-chart .d-tab.Naira{
+	color: #932d2b;
+    font-weight: 600;
+}
+.price-chart .tabs .indicator{
+	background-color: #863034;
+}
+.btn-flat{
+	border: 1px dotted #c3c3c3;
+	color: #333;
+	height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.btn-flat i{
+	float: left;
+	padding-right: 10px;
+	line-height: 40px;
+}
+nav.theme-bg-dark{
+    background-color: #509fec;
+}
+nav.theme-bg-dark .hide-on-med-and-down{
+	line-height: 64px;
+}
+.title{
+	font-size: 1.94rem;
+}
+.border-bot-3{
+	padding-bottom: 15px !important;
+    border-bottom: 1px dotted #e2e1e1;
+}
+.select-wrapper input.select-dropdown{
+	border-bottom: 1px dotted #c3c3c3;
+}
+.card .card-action a{
+	color: #12326b !important;
+	font-weight: 500;
+}
+.card .title{
+    font-size: 1.6rem;
+    text-align: center;
+}
+.card p, .card .card-title{
+	color: rgba(0,0,0,0.71) !important;
+}
+.card *{
+	position: relative;
+}
+.card-icon{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    vertical-align: middle;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+}
+.card-icon img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    display: inline-table;
+    vertical-align: middle;
+    margin-top: -50px;
+    height: 100px;
+    width: 100px;
+}
+td.receivedCrypto{
+	color: #12326b;
+}
+td.sentCrypto{
+	color: #ef4431;
+}
+.b-txt{
+	font-weight: 600;
+    padding: 15px 0;
+}
+.padd-10-0{
+	padding: 10px 0;
+}
+.padd-top-10{
+	padding-top: 10px;
+}
+.btn-flat:hover{
+	background-color: #e4e4e4;
+}
+.dataTables_length select.form-control {
+    width: 70px;
+    text-align: center;
+    display: inline-block;
+}
+#tblTransaction_paginate .mdl-button--raised.mdl-button--colored {
+    background: #509fec;
+    color: #fff;
+}
+#tblTransaction_paginate .mdl-button--raised.mdl-button--colored:hover {
+    background: #2478ca;
+    color: #fff;
+}
+a.uLine{
+	text-decoration: underline;
+}
+.card .card-content .card-title{
+	margin-bottom: 15px;
+    margin-top: 0;
+}
+nav ul li a:hover, nav ul li.active{
+	background-color: transparent;
+}
+@media (min-width: 993px){
+	#walletheader, #walletheader nav{
+		width: calc(100% - 300px);
+	    max-width: calc(100% - 300px);
+	}
+}

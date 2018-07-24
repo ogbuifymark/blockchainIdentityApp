@@ -1,0 +1,135 @@
+﻿
+<!DOCTYPE html>
+
+<html class="no-js" ng-app="myappText">
+
+<head>
+    <title>Identity Authentication</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="~/Content/light/img/Icon.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/Content/light/img/Icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/Content/light/img/Icon.png">
+    <link href="https://fast.fonts.net/cssapi/487b73f1-c2d1-43db-8526-db577e4c822b.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/light/bower_components/select2/dist/css/select2.min.css" rel="stylesheet">
+    <link href="~/Content/light/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="~/Content/light/bower_components/dropzone/dist/dropzone.css" rel="stylesheet">
+    <link href="~/Content/light/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/light/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+    <link href="~/Content/light/bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="~/Content/light/bower_components/slick-carousel/slick/slick.css" rel="stylesheet">
+    <link href="~/Content/light/css/main5f48.css?version=4.0.0" rel="stylesheet">
+    <link href="~/Content/light/bower_components/dragula.js/dist/dragula.min.css" rel="stylesheet" />
+    
+<link href="~/Content/light/css/mystyle.css" rel="stylesheet" />
+    @*<link href="~/Content/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">*@
+
+    <!-- Loading Bar -->
+    @*<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.css' type='text/css' media='all' />*@
+    <!-- Start of Async Drift Code -->
+    <script>
+        //if (location.protocol != 'https:') {
+
+        //    if (!window.location.href.includes("localhost")) {
+        //        location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+
+        //    }
+        //}
+        !function () {
+            var t;
+            if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+                t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                t.factory = function (e) {
+                    return function () {
+                        var n;
+                        return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+                    };
+                }, t.methods.forEach(function (e) {
+                    t[e] = t.factory(e);
+                }), t.load = function (t) {
+                    var e, n, o, i;
+                    e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+                        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+                        n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+                });
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('3weyvmmvhe3e');
+    </script>
+    <!-- End of Async Drift Code -->
+</head>
+
+<body class="with-content-panel">
+
+    <div ui-view></div>
+
+    <!--JQuery-->
+    <!--Import jQuery before materialize.js-->
+    <!--HighCharts Js-->
+
+    <!--Angular Js-->
+    <script src="~/Content/light/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="~/Scripts/highstock.js"></script>
+    
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.3/angular-ui-router.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+
+    <script src="~/Scripts/app/myapp-controller.js?version=@ViewBag.version"></script>
+    <script src="~/Scripts/app/Routes.js?version=@ViewBag.version"></script>    
+    <script src="~/Scripts/dirPagination.js"></script>
+    @*<script src="~/Scripts/ng-file-upload-shim.min.js"></script>
+    <script src="~/Scripts/ng-file-upload.min.js"></script>*@
+     <script src="~/Scripts/app/AuthController.js?version=@ViewBag.version"></script>
+    
+
+    
+    <!--ChartJs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+
+    <script id="dashboardControllerScript" src="~/Scripts/app/DashboardController.js?version=@ViewBag.version"></script>
+    <script id="homeControllerScript" src="~/Scripts/app/HomeController.js?version=@ViewBag.version"></script>
+    
+    <!--ChartJs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+
+    <!--Light Supreme Template-->
+    @*<script src="~/Content/plugins/lightpinsupreme/bower_components/jquery/dist/jquery.min.js"></script>*@
+    <script src="~/Content/light/bower_components/moment/moment.js"></script>
+    <script src="~/Content/light/bower_components/chart.js/dist/Chart.min.js"></script>
+    <script src="~/Content/light/bower_components/select2/dist/js/select2.full.min.js"></script>
+    <script src="~/Content/light/bower_components/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+    <script src="~/Content/light/bower_components/ckeditor/ckeditor.js"></script>
+    <script src="~/Content/light/bower_components/bootstrap-validator/dist/validator.min.js"></script>
+    <script src="~/Content/light/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="~/Content/light/bower_components/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+    <script src="~/Content/light/bower_components/dropzone/dist/dropzone.js"></script>
+    <script src="~/Content/light/bower_components/editable-table/mindmup-editabletable.js"></script>
+    <script src="~/Content/light/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/Content/light/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/Content/light/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script src="~/Content/light/bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="~/Content/light/bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="~/Content/light/bower_components/slick-carousel/slick/slick.min.js"></script>
+    <script src="~/Content/light/bower_components/bootstrap/js/dist/util.js"></script>
+    <script src="~/Content/light/bower_components/bootstrap/js/dist/alert.js"></script>
+    <script src="~/Content/light/bower_components/bootstrap/js/dist/button.js"></script>
+    <script src="~/Content/light/bower_components/bootstrap/js/dist/carousel.js"></script>
+    <script src="~/Content/light/bower_components/bootstrap/js/dist/collapse.js"></script>
+    <script src="~/Content/light/bower_components/bootstrap/js/dist/dropdown.js"></script>
+    <script src="~/Content/light/bower_components/bootstrap/js/dist/modal.js"></script>
+    <script src="~/Content/light/bower_components/bootstrap/js/dist/tab.js"></script>
+    <script src="~/Content/light/bower_components/bootstrap/js/dist/tooltip.js"></script>
+    <script src="~/Content/light/bower_components/bootstrap/js/dist/popover.js"></script>
+    <script src="~/Content/light/bower_components/dragula.js/dist/dragula.min.js"></script>
+    <script src="~/Content/light/js/dataTables.bootstrap4.min.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.min.js"></script>
+
+     <script src="~/Content/light/js/main5f48.js?version=4.0.0"></script>
+
+
+</body>
+
+
+</html>

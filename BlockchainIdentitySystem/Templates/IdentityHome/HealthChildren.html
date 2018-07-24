@@ -1,0 +1,45 @@
+﻿<div class="pipeline-body" ng-controller="HealthController">
+    <div width="100%" class="pipeline-item my-controller" dir-paginate="kid in filteredHealth | filter:q | itemsPerPage: pageSize" pagination-id="health" current-page="currentPage">
+
+
+        <div>
+
+            <div class="pi-controls">
+                <div class="pi-settings os-dropdown-trigger">
+                    <i class="os-icon os-icon-ui-46"></i>
+
+                </div>
+                <div ng-if="kid.sponsored == 1" class="status status-green" data-placement="top" data-toggle="tooltip"
+                     title="Sponsored"></div>
+                <div ng-if="kid.sponsored == 2" class="status status-pill yellow" data-placement="top" data-toggle="tooltip"
+                     title="Awaiting Confirmation"></div>
+                <div ng-if="kid.sponsored == 3" class="status status-red" data-placement="top" data-toggle="tooltip"
+                     title="Awaiting Sponsoreship"></div>
+            </div>
+            <div class="pi-body">
+                <div class="avatar">
+                    <img alt="" src="{{kid.picture}}" width="30">
+                </div>
+                <div class="pi-info">
+                    <div class="h6 pi-name">{{kid.name}}</div>
+                    <div class="pi-sub">{{kid.charityHome}}</div>
+                </div>
+            </div>
+            <div class="pi-foot">
+                <div class="tags">
+                    <a class="tag" href="#!/dashboard/mykids/{{kid.id}}">View child</a>
+                    <button class="tag" data="{{kid.id}}" data-target="#onboardingWideFormModal" ng-click="getSponsorPage(kid.id)" data-toggle="modal">Sponsor again</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="pagination">
+        <div class="text-center">
+            <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" pagination-id="health" template-url="dirPagination.tpl.html"></dir-pagination-controls>
+        </div>
+    </div>
+
+</div>
